@@ -80,3 +80,21 @@ nlu:
     - Las [listas de precios](MODEL) [tendrán](EVENT) un [período de vigencia](PROPERTY) ([fecha inicial](PROPERTY) y [fecha final](PROPERTY)). 
 
 
+# Nico
+# Generic
+El [sistema](SYSTEM) [permitirá](EVENT) crear [tres tipos de usuarios](PROPERTY) [administrador](MODEL), [usuario](MODEL) y [gerente](MODEL)
+El [sistema](SYSTEM) [tendrá](EVENT) un [usuario](MODEL) y [contraseña](MODEL)
+La [contraseña](MODEL) [será](EVENT) [cifrada](PROPERTY)
+Cada vez que se [ingrese](EVENT), [modifique](EVENT) o [elimine](EVENT) un [registro](MODEL) se [avisará](EVENT) si el procedimiento fue [exitoso](PROPERTY) o [denegado](PROPERTY)
+El [sistema](SYSTEM) [deberá](EVENT) dar [respuesta](PROPERTY) al [acceso](EVENT) de [todos](PROPERTY) los [usuarios](MODEL)
+
+# Sistema de control de asistencia
+El [sistema](SYSTEM) [permitirá](EVENT) [registrar](EVENT) la [hora](PROPERTY) en la que un [empleado](MODEL) [ingresa](EVENT) o [sale](EVENT) del trabajo, [registrándolo](EVENT) en el [sistema](SYSTEM).
+Al [ingresar](EVENT) al [sistema](SYSTEM), se [mostrará](EVENT) una [pantalla](MODEL) donde se [solicitarán](EVENT) los [datos](PROPERTY) y una [contraseña](PROPERTY) y se [realizará](EVENT) el [registro del ingreso](MODEL).
+
+# Sistema venta de celulares
+El [sistema](SYSTEM) [deberá](EVENT) [clasificar](EVENT) [automáticamente](PROPERTY) la [información](MODEL).
+El [sistema](SYSTEM) [deberá](EVENT) [contar](EVENT) con la [información](MODEL) necesaria para que los [usuarios](MODEL) [visualicen](EVENT) un [panorama extenso](PROPERTY) de los [productos exhibidos](MODEL).
+El [sistema](SYSTEM) [deberá](EVENT) [ofrecer](EVENT) al [usuario](MODEL) una [interfaz](COMPONENT) [sencilla](PROPERTY) para su [fácil manipulación](PROPERTY)
+El [sistema](SYSTEM) [deberá](EVENT) [generar](EVENT) [facturas](MODEL) de los [productos](MODEL) vendidos.
+

@@ -3,12 +3,19 @@ version: "2.0"
 nlu:
 - intent: double_chain_and_star
   examples: |   
-    - El [sistema](SYSTEM) [enviará](EVENT) un [correo electrónico](MODEL) cuando se [registre](EVENT) alguna de las siguientes [transacciones](MODEL): [pedido de venta](MODEL) de [cliente](MODEL), [despacho de mercancía](MODEL) al [cliente](MODEL), [emisión de factura](MODEL) a[cliente](MODEL) y [registro de pago](MODEL) de [cliente](MODEL).
+    - El [sistema](SYSTEM) [enviará](EVENT) un [correo electrónico](MODEL) cuando se [registre](EVENT) alguna de las siguientes [transacciones](MODEL) : [pedido de venta](MODEL) de [cliente](MODEL), [despacho de mercancía](MODEL) al [cliente](MODEL), [emisión de factura](MODEL) a [cliente](MODEL) y [registro de pago](MODEL) de [cliente](MODEL).
     - El [sistema](SYSTEM) [enviará una alerta](EVENT) al [administrador del sistema](MODEL) cuando [ocurra](EVENT) alguno de los siguientes [eventos](MODEL): [Registro de nueva cuenta](PROPERTY), [ingreso al sistema por parte del cliente](PROPERTY), [2 o más intentos fallidos en el ingreso de la contraseña de usuario y cambio de contraseña de usuario](PROPERTY).
-    - El [proceso de compras](MODEL) en [el sistema](SYSTEM) [abarcará](EVENT) los siguientes [pasos](MODEL) y [transacciones](MODEL): [Ingreso](EVENT) de la [requisición](MODEL), [emisión](EVENT) de la [solicitud de cotización](MODEL) y [emisión](EVENT) de la [orden de compra](MODEL).
+    - El [proceso de compras](MODEL) en [el sistema](SYSTEM) [abarcará](EVENT) los siguientes [pasos](MODEL) y [transacciones](MODEL) : [Ingreso](EVENT) de la [requisición](MODEL), [emisión](EVENT) de la [solicitud de cotización](MODEL) y [emisión](EVENT) de la [orden de compra](MODEL).
     - El [usuario](MODEL) podrá [visualizar](EVENT) todos los [pedidos](MODEL) [realizados](PROPERTY) con una [descripción](PROPERTY) [detallada](PROPERTY)
 - intent: double_chain
-  examples: |  
+  examples: | 
+    - Los [mails](COMPONENT) [contendrán](EVENT) las [frases similares](MODEL) [encontradas](EVENT) en los [últimos días](PROPERTY)
+    - La [aplicación](SYSTEM) [envíara](EVENT) [mails](COMPONENT) [diarios](PROPERTY) a una lista de [suscriptos](MODEL)
+    - La [aplicación](SYSTEM) debe [comparar](EVENT) las [frases chequeables](MODEL) con el [historial](MODEL) de [frases verificadas](MODEL) y [determinar](EVENT) si son [similares](PROPERTY)
+    - La [aplicación](SYSTEM) tiene que [extraer](EVENT) [frases chequeables](MODEL) de esas [notas](MODEL)
+    - La [aplicación](SYSTEM) debe [extraer](EVENT) [diariamente](PROPERTY) las [notas](MODEL) de varios [medios digitales](MODEL)
+    - El [sistema](SYSTEM) permitirá [registrar](EVENT) la [hora](PROPERTY) en la que un [empleado](MODEL) [ingresa](EVENT) o [sale](EVENT) del [trabajo](MODEL), [registrándolo](EVENT) en el [sistema](SYSTEM).
+    - El [sistema](SYSTEM) [deberá](EVENT) dar [respuesta](PROPERTY) al [acceso](EVENT) de [todos](PROPERTY) los [usuarios](MODEL) 
     - El [administrador](MODEL) podrá [ingresar](EVENT) registros de nuevos [productos](MODEL) en la [web](COMPONENT).
     - El [administrador](MODEL) podrá [visualizar](EVENT) todos los [productos](MODEL) por [categorías](MODEL) con sus respectivas [características](PROPERTY)
     - el [usuario](MODEL) podrá [registrar](EVENT) todo sus [datos personales](PROPERTY) en la [interfaz](COMPONENT) del [usuario](MODEL)
@@ -28,7 +35,9 @@ nlu:
     - Se podrán [crear](EVENT) [listas de precios](MODEL) [convenidos](EVENT) con un [cliente](MODEL). 
     - Los [pedidos de compra](MODEL) que [excedan](EVENT) los [montos establecidos](PROPERTY) en el [flujo de liberaciones](MODEL) de pedidos configurados, deberán [pasar](EVENT) por las [aprobaciones establecidas](PROPERTY) en dicho [flujo de aprobación](MODEL).
 - intent: simple_chain_and_star
-  examples: |    
+  examples: | 
+    - Cada vez que se [ingrese](EVENT), [modifique](EVENT) o [elimine](EVENT) un [registro](MODEL) se [avisará](EVENT) al [administrador](MODEL) si el procedimiento fue [exitoso](PROPERTY) o [denegado](PROPERTY)
+    - El [sistema](SYSTEM) [permitirá](EVENT) crear tres [tipos](PROPERTY) de [usuarios](MODEL), [administrador](MODEL), [usuario](MODEL) y [gerente](MODEL)   
     - El [software](SYSTEM) debe poder [emitir](EVENT) los siguientes [estados financieros](MODEL): [Balance general](PROPERTY), [Estado de ganancias y pérdidas](PROPERTY), [Estado de flujos de efectivo](PROPERTY). 
     - Además, debe poder [emitir](EVENT) un [listado](MODEL) de [mayor general](MODEL) y [mayor analítico](MODEL).
     - La [pantalla de registro](MODEL) de pago puede [imprimir](EVENT) los [datos](PROPERTY) en [pantalla](PROVIDER) a la [impresora](PROVIDER).
@@ -38,6 +47,9 @@ nlu:
     - Los [usuarios](MODEL) deben [ingresar](EVENT) al [sistema](SYSTEM) con un [nombre de usuario](PROPERTY) y [contraseña](PROPERTY).
 - intent: simple_chain
   examples: |    
+    - Las [frases similares](MODEL) que se encuentren deberán [almacenarse](EVENT) para ser [enviadas](EVENT) por [mail](COMPONENT)
+    - Las [notas](MODEL) deben [actualizarse](EVENT) mínimo dos veces [por día](PROPERTY)
+    - La [contraseña](MODEL) [será](EVENT) [cifrada](PROPERTY)
     - el [usuario](MODEL) podrá [actualizar](EVENT), [ingresa](EVENT) y [visualizar](EVENT) la [información registrada](MODEL) en el RQ4
     - El [sistema](SYSTEM) [controlará](EVENT) el acceso y lo [permitirá](EVENT) solamente a [usuarios](MODEL) [autorizados](PROPERTY).
     - Antes de poder [aprobarse](EVENT) los [datos](PROPERTY) del [pedido](MODEL) deben estar [completos](PROPERTY).
@@ -54,6 +66,7 @@ nlu:
     - Los [libros](MODEL) de [venta](MODEL) y de [compras](MODEL) serán [emitidos](EVENT) en el [formato](PROPERTY) [establecido](EVENT) por las [autoridades tributarias](MODEL) de dicha materia.
 - intent: star
   examples: |
+    - El [sistema](SYSTEM) [tendrá](EVENT) un [usuario](MODEL) y [contraseña](MODEL)
     - el [sistema](SYSTEM) deberá [solicitar](EVENT): [Nombre](PROPERTY) del cliente, [Apellidos](PROPERTY) del cliente, [Sexo](PROPERTY), [Documento](PROPERTY) de identidad, [Fecha de nacimiento](PROPERTY), [Correo electrónico](PROPERTY), Dirección](PROPERTY) de residencio, [Teléfono](PROPERTY)
     - El [sistema](SYSTEM) [permitirá](EVENT) [aprobar](EVENT), [cambiar](EVENT) o [actualizar](EVENT) [planes](MODEL) y [cronogramas de proyecto](MODEL).
     - Los integrantes del [grupo de usuarios de analistas](MODEL) pueden [ingresar](EVENT) [solicitudes](MODEL) pero no pueden [aprobarlas](EVENT) o [borrarlas](EVENT).
@@ -80,21 +93,16 @@ nlu:
     - Las [listas de precios](MODEL) [tendrán](EVENT) un [período de vigencia](PROPERTY) ([fecha inicial](PROPERTY) y [fecha final](PROPERTY)). 
 
 
+
+
 # Nico
 # Generic
-El [sistema](SYSTEM) [permitirá](EVENT) crear [tres tipos de usuarios](PROPERTY) [administrador](MODEL), [usuario](MODEL) y [gerente](MODEL)
-El [sistema](SYSTEM) [tendrá](EVENT) un [usuario](MODEL) y [contraseña](MODEL)
-La [contraseña](MODEL) [será](EVENT) [cifrada](PROPERTY)
-Cada vez que se [ingrese](EVENT), [modifique](EVENT) o [elimine](EVENT) un [registro](MODEL) se [avisará](EVENT) si el procedimiento fue [exitoso](PROPERTY) o [denegado](PROPERTY)
-El [sistema](SYSTEM) [deberá](EVENT) dar [respuesta](PROPERTY) al [acceso](EVENT) de [todos](PROPERTY) los [usuarios](MODEL)
-
+# TODO:
 # Sistema de control de asistencia
-El [sistema](SYSTEM) [permitirá](EVENT) [registrar](EVENT) la [hora](PROPERTY) en la que un [empleado](MODEL) [ingresa](EVENT) o [sale](EVENT) del trabajo, [registrándolo](EVENT) en el [sistema](SYSTEM).
-Al [ingresar](EVENT) al [sistema](SYSTEM), se [mostrará](EVENT) una [pantalla](MODEL) donde se [solicitarán](EVENT) los [datos](PROPERTY) y una [contraseña](PROPERTY) y se [realizará](EVENT) el [registro del ingreso](MODEL).
-
+#Al [ingresar](EVENT) al [sistema](SYSTEM), se [mostrará](EVENT) una [pantalla](MODEL) donde se [solicitarán](EVENT) los [datos](PROPERTY) y una [contraseña](PROPERTY) y se [realizará](EVENT) el [registro del ingreso](MODEL).
 # Sistema venta de celulares
-El [sistema](SYSTEM) [deberá](EVENT) [clasificar](EVENT) [automáticamente](PROPERTY) la [información](MODEL).
-El [sistema](SYSTEM) [deberá](EVENT) [contar](EVENT) con la [información](MODEL) necesaria para que los [usuarios](MODEL) [visualicen](EVENT) un [panorama extenso](PROPERTY) de los [productos exhibidos](MODEL).
-El [sistema](SYSTEM) [deberá](EVENT) [ofrecer](EVENT) al [usuario](MODEL) una [interfaz](COMPONENT) [sencilla](PROPERTY) para su [fácil manipulación](PROPERTY)
-El [sistema](SYSTEM) [deberá](EVENT) [generar](EVENT) [facturas](MODEL) de los [productos](MODEL) vendidos.
+#El [sistema](SYSTEM) [deberá](EVENT) [clasificar](EVENT) [automáticamente](PROPERTY) la [información](MODEL).
+#El [sistema](SYSTEM) [deberá](EVENT) [contar](EVENT) con la [información](MODEL) necesaria para que los [usuarios](MODEL) [visualicen](EVENT) un [panorama extenso](PROPERTY) de los [productos exhibidos](MODEL).
+#El [sistema](SYSTEM) [deberá](EVENT) [ofrecer](EVENT) al [usuario](MODEL) una [interfaz](COMPONENT) [sencilla](PROPERTY) para su [fácil manipulación](PROPERTY)
+#El [sistema](SYSTEM) [deberá](EVENT) [generar](EVENT) [facturas](MODEL) de los [productos](MODEL) vendidos.
 
